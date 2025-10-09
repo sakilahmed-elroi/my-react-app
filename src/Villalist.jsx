@@ -296,10 +296,14 @@ const VillaCard = ({ villa }) => {
               <b className="text-success fs-6">
                 <i className="bi bi-currency-rupee"></i>
                 {villa.rate}
+                <span className="fw-bold text-muted small">
+                  {" "}
+                  Rupees Onwards
+                </span>
               </b>
-              <span className="fw-bold text-muted small">Rupees</span>
             </div>
-            <div className="text-center">
+            <div className="text-start">
+              <span className="text-muted small"> Duration : </span>
               <span className="text-danger fw-medium small">24:00 Hrs</span>
             </div>
           </ListGroup.Item>

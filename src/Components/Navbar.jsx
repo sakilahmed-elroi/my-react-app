@@ -15,18 +15,24 @@ function NavigationBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link href="/" className="fw-semibold mx-2">
+          {/* LEFT SIDE LINKS */}
+          <Nav className="me-auto">
+            <Nav.Link href="/" className="fw-semibold mx-0">
               Home
             </Nav.Link>
-            <Nav.Link href="/VillaList" className="fw-semibold mx-2">
+            <Nav.Link href="/VillaList" className="fw-semibold mx-0">
               Villas
             </Nav.Link>
-            <Nav.Link href="/about" className="fw-semibold mx-2">
-              About
-            </Nav.Link>
-            <Nav.Link href="/contact" className="fw-semibold mx-2">
-              Contact
+          </Nav>
+
+          {/* RIGHT SIDE LOGIN */}
+          <Nav>
+            <Nav.Link
+              href="/Login"
+              className="fw-semibold text-info mx-2 d-flex align-items-center"
+            >
+              <i className="bi bi-person-circle text-white px-1"></i> Login /
+              Sign Up
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
