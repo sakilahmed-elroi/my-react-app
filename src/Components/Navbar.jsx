@@ -1,52 +1,38 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
+import React from "react";
 import Navbar from "react-bootstrap/Navbar";
-import "./Navabar.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import { Link } from "react-router-dom";
-function NavBar() {
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
+
+function NavigationBar() {
   return (
-    <>
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        className="navbar-orange"
-        fixed="top"
-      >
-        <Container className="fw-bold">
-          <Navbar.Brand className="fs-3 text-white" href="/">
-            <i id="brandicon" className="bi bi-house-heart-fill"></i>HomeStay
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="/Villalist">Villas</Nav.Link>
-              {/*<Nav.Link href="#pricing">Pricing</Nav.Link>
-              <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown> */}
-            </Nav>
-            {/* <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                Dank memes
-              </Nav.Link>
-            </Nav> */}
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </>
+    <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="shadow">
+      <Container>
+        <Navbar.Brand href="/" className="fw-bold fs-3">
+          <i id="brandicon" className="bi bi-house-heart-fill"></i> Paradise
+          Villas
+        </Navbar.Brand>
+
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link href="/" className="fw-semibold mx-2">
+              Home
+            </Nav.Link>
+            <Nav.Link href="/VillaList" className="fw-semibold mx-2">
+              Villas
+            </Nav.Link>
+            <Nav.Link href="/about" className="fw-semibold mx-2">
+              About
+            </Nav.Link>
+            <Nav.Link href="/contact" className="fw-semibold mx-2">
+              Contact
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export default NavBar;
+export default NavigationBar;
